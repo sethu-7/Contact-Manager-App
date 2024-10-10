@@ -1,8 +1,10 @@
 const express=require('express')
 const erroHandler = require('./middlewares/errorHandler')
+const connectDB=require('./config/dbConnection')
 const app=express()
 dotenv=require('dotenv').config()
 
+connectDB()
 app.use(express.json())
 app.use('/api/contacts',require("./routes/contactRoutes"))
 app.use(erroHandler)
