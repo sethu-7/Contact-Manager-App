@@ -77,8 +77,8 @@ This project uses **JWT (JSON Web Tokens)** for authentication. To access the en
 - **Request Body**:
   ```json
   {
-    "name": "User Name",
-    "email": "user@example.com",
+    "username": "User Name",
+    "useremail": "user@example.com",
     "password": "password123"
   }
   ```
@@ -89,7 +89,7 @@ This project uses **JWT (JSON Web Tokens)** for authentication. To access the en
 - **Request Body**:
   ```json
   {
-    "email": "user@example.com",
+    "useremail": "user@example.com",
     "password": "password123"
   }
   ```
