@@ -4,9 +4,11 @@ const {getContacts,
     getContactById,
     createContact,
     updateContact,
-    deletecontact}=require('../controllers/contactController')
+    deleteContact}=require('../controllers/contactController')
+const validationHandler = require('../middlewares/validationHandler')
 
+router.use(validationHandler)
 router.route('/').get(getContacts).post(createContact)
-router.route('/:id').get(getContactById).put(updateContact).delete(deletecontact)
+router.route('/:id').get(getContactById).put(updateContact).delete(deleteContact)
 
 module.exports=router   
